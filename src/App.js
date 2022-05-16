@@ -1,14 +1,29 @@
 import './App.css';
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import 
 
 function App() {
 
-  const [entries, SetEntries] = useState([])
+  const [videoGames, setVideoGames] = useState([]);
+
+  useEffect(() => {
+    getVideoGames();
+  }, []);
+
+  async function getVideoGames(){
+    try{
+      debugger;
+      const response = await axios.get('');
+      console.log(response.data)
+      setVideoGames(response.data);
+    } catch(ex){
+      console.log('ERROR in getVideoGames EXCEPTION: ${ex}')
+    }
+  }
 
   return (
     <div>
-     <h3>Hello World</h3>
+     <DisplayPlatformStats videoGames={videoGames}/>
     </div>
   );
 }
