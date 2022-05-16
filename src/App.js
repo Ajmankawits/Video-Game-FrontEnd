@@ -14,7 +14,6 @@ function App() {
     try{
       debugger;
       const response = await axios.get('');
-      console.log(response.data)
       setVideoGames(response.data);
     } catch(ex){
       console.log('ERROR in getVideoGames EXCEPTION: ${ex}')
