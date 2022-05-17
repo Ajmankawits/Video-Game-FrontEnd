@@ -1,6 +1,10 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import GlobalSalesChart from './components/charts/DisplayPlatformStats';
+import axios from "axios";
+import GameTable from './components/GameTable/GameTable';
+import NavBar from './components/NavBar/NavBar';
+import SampleQuestion from './components/charts/SampleQuestion';
 
 function App() {
 
@@ -22,8 +26,20 @@ function App() {
 
 
   return (
-    <div>
-     <GlobalSalesChart videoGames={games}/>
+    <div className="App">
+      <nav style={{display: "flex", justifyContent: "space-evenly"}} className=" navbar navbar-expand-lg navbar-light bg-light">
+        <div className="title">
+        <img className="con-icon" src="https://i.imgur.com/AkxEsYC.png?1"/>
+
+      <h1 >Video Games</h1>
+</div>
+      <NavBar games ={games} setVideoGames = {setVideoGames} getVideoGames={setVideoGames}/>
+      </nav>
+      <GlobalSalesChart  videosGames = {games}/>
+      <GameTable games={games} setVideoGames = {setVideoGames}/>
+      <div className="custom-chart">
+      <SampleQuestion videosGames = {games}/>
+      </div>
     </div>
   );
 }

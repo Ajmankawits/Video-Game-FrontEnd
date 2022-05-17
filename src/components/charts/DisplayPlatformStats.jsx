@@ -54,7 +54,7 @@ const GlobalSalesChart = (props) => {
       const data = [
         ["Platform", "Sales(per million)", { role: "style" }],
         ...platformArrays,
-      ]; // CSS-style declaration
+      ];
       return data;
     }
   
