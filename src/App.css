@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import "open-props/style";
+@import "open-props/normalize";
+
+
+.tablelayout{
+   width: 100%;
+   height: 300px;
+   overflow: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.buttonsearch{
+    box-shadow: 4px 4px 12px grey;
+    border-radius: 20px;
+    background-color:#ffffff ;
+    margin-left: 2em;
+    font-weight: bold;
+    color: grey;
+    border: 2px solid grey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.buttonsearch:hover{
+    transform: scale(1.1);
+    background-color: rgb(72, 141, 245);
+    color: #ffffff;
+}
+.box {
+    
+    box-shadow: 20px 20px 20px rgb(116, 116, 116);
+    margin: 1rem;
+    padding: 20px;
+    width: 90%;
+    background-color:white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+.App{
+    background-image: url(https://wallpaperaccess.com/full/3949598.jpg);
+    background-color: black;
+
+    
+}
+
+.tablelayout{
+    background-color: white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    border-radius:30px;
+    padding: 30px;
+    box-shadow: 0 20px 30px grey;
+}
+
+.custom-chart{
+    width: 90%;
+    margin-top: 15x;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    border-style: none;
+    box-shadow: 20px 20px 20px rgb(116, 116, 116);
+
+}
+
+
+.single-row{
+    margin-bottom: 1px;
+    color: #000000;
+    font-size: 20px;
+    padding-top: 1em;
+    
+}
+
+
+nav{
+    height: 9em;
+    display: flex;
+   padding-top: 3em;
+}
+
+
+input{
+    border-radius:10px;
+}
+
+.game-btn{
+border: 2px solid grey;
+border-radius: 10px;
+background-color: aliceblue;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.game-btn:hover{
+    transform: scale(1.2);
+    background-color: rgb(252, 251, 251);
+    color: rgb(0, 0, 0);
+    box-shadow: 5px  5px 10px greenyellow;
+    
+}
+.navbar{
+    justify-items: space-between;
+}
+
+h1{
+    font-family:'Bangers', cursive;
+    text-decoration-color: #000000;
+   
+}
+
+.title{
+    display: flex;
+}
+.slide-fade{
+    background-color: white;
+    border:2px solid grey;
+    border-radius: 30%;
+    
+
+}
+.slide-fade:hover {
+    animation:
+      var(--animation-fade-out) forwards,
+      var(--animation-slide-out-down);
+    animation-timing-function: var(--ease-squish-3);
+    animation-duration: 1s;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
