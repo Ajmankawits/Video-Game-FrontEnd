@@ -13,7 +13,7 @@ export const options = {
 const SampleQuestion = (props) => {
   function topfivegames() {
     let Bestgames = props.videosGames.filter(
-      (element) => element.rank >= 1 && element.rank < 5
+      (element) => element.rank >= 1 && element.rank < 6
     );
     let newGames =Bestgames.map((game) => {
       return [  game.name,game.year,game.rank];
